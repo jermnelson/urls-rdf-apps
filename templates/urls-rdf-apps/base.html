@@ -8,35 +8,54 @@
     <link rel="icon" href="/favicon.ico">
 
     <title>
-        Presentation for PPC Working Group on URIs in MARC
+        URIs in RDF Applications - 
+        {% block title %}Presentation for PPC Working Group on URIs in MARC{% endblock %}
     </title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/default.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
   </head>
 
   <body>
-    {% block main %}
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
 
-        <div class="cover-container">
+        <div class="container">
+          {% block header %}
+          {% include 'urls-rdf-apps/navbar.html' %}           
+ 
+          {#<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+              <a class="navbar-brand">URIs in RDF Applications</a>
+              <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item {% if category.startswith('home') %}active{% endif %}" >
+                        <a class="nav-link" 
+                           href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" id="pages-dropdown">Pages</a>
+                        <div class="dropdown-menu" aria-labelledby="pages-dropdown">
+                            {% for page in presentation %}
+                            <a class="dropdown-item" href="{{ url_for('page', path=page.path) }}">
+                                {{ page.meta.title }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </li>
+                    <li class="nav-item">    
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+              </div>
+          </nav>#}
+          {% endblock header %}
 
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
-              <nav class="nav nav-masthead">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Contact</a>
-              </nav>
-            </div>
-          </div>
-
+          {% block cover %}
           <div class="inner cover">
             <h1 class="cover-heading">Cover your page.</h1>
             <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
@@ -44,25 +63,26 @@
               <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
             </p>
           </div>
+          {% endblock %}
 
+          {% block footer %}
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+              <p>Presentation &copy;2017 by Jeremy Nelson under CC0</p>
             </div>
           </div>
-
+          {% endblock %}
         </div>
 
       </div>
 
     </div>
-    {% endblock %}
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="{{ url_for('static', filename='js/jquery-3.1.1.slim.min.js') }}"></script>
-    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
-    <script src="{{ url_for('static', filename='js/tether.min.js"></script>
+    {#<script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/jquery-3.1.1.slim.min.js') }}"><\/script>')</script>#}
+    <script src="{{ url_for('static', filename='js/tether.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{{ url_for('static', filename='js/ie10-viewport-bug-workaround.js') }}"></script>

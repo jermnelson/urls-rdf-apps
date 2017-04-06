@@ -1,9 +1,13 @@
 title: SEO Aware URIs
 published: 2017-04-26
+order: 2
 
 The importance of creating URLs that are favored for human consumption
 has become more important, particularly as requirements are pulled from
-the Colorado Alliance of Research Libraries BIBCAT project.
+the Colorado Alliance of Research Libraries BIBCAT project. Reading 
+[Cool URIs don't change][REF2] by Sir Tim Berners-Lee in the web ancient 
+date of 2001 &hellip;
+
 
 ## Slugify Pattern
 In building the first iterations of the Aristotle Discovery Layer (the 
@@ -14,8 +18,15 @@ SEO friendly url. While I no longer actively develop in [Django][DJGO],
 I still use the basic regular expression function in many of my projects
 when  
 
+
+
 ## Wikipedia Pattern
 
 ## Conclusions
 
+## References
+<sup id="ref-1">1</sup>Coyle, K. *On the Web, of the Web* LITA 2011 Keynote, October 1, 2011. Accessed
+    (http://www.kcoyle.net/presentations/lita2011.html)
+
 [DJGO]: https://www.djangoproject.com/
+[REF2]: https://www.w3.org/Provider/Style/URI

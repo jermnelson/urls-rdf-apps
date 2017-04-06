@@ -1,0 +1,28 @@
+{% extends 'urls-rdf-apps/base.html' %}
+
+{% block cover %}
+<article class="jumbotron">
+    <h1 class="display-3">{{ page.meta.title }}</h1>
+    {{ page.html|safe }}
+    <p>Published on {{ page.meta.published }}</p>
+
+</article>
+<div class="row">
+    <div class="btn-group col-md-6 offset-md-6">
+  {% if previous_page %}
+  <a href="{{ url_for('page', path=previous_page.path) }}" class="btn btn-lg btn-warning">
+    <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+    {{ previous_page.meta.title }}</a>
+  {% endif %}
+  {% if next_page %}
+  <a href="{{ url_for('page', path=next_page.path) }}" 
+     class="btn btn-lg btn-secondary">
+    {{ next_page.meta.title }}
+    <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+
+    </a>
+  {% endif %}
+    </div>
+</div>
+
+{% endblock %}

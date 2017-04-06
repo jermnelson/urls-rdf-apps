@@ -1,1 +1,23 @@
 {% extends 'urls-rdf-apps/base.html' %}
+
+{% block cover %}
+<div class="inner cover">
+    <h1 class="cover-heading">URIs in RDF Applications</h1>
+    <p class="lead">
+        Experiences with URIs for bibliographic RDF-based applications.
+        
+    </p>
+    <h2>List of topics</h2>
+    <ol>
+    {% for page in pages %}
+     <li><a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a></li>
+    {% endfor %}
+    </ol>
+   <p class="lead">
+     <a href="{{ url_for('page', path='history') }}" 
+        class="btn btn-lg btn-secondary">
+        History
+    </a>
+   </p>
+ </div>
+ {% endblock %}
