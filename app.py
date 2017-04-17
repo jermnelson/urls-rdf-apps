@@ -26,3 +26,15 @@ def page(path):
         presentation=presentation,
         previous_page=prev_page,
         next_page=next_page)
+
+@app.route("/contact")
+def contact():
+    return render_template("urls-rdf-apps/contact.html",
+        category='contact',
+        presentation=presentation)
+
+@app.route("/help")
+def help():
+    return render_template("urls-rdf-apps/help.html",
+        category='help',
+        presentation=presentation)

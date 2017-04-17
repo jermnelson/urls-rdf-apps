@@ -8,8 +8,9 @@
         
     </p>
     <h2>List of topics</h2>
+    <p>{{ pages }}</p>
     <ol>
-    {% for page in pages %}
+    {% for page in presentation %}
      <li><a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a></li>
     {% endfor %}
     </ol>
@@ -17,6 +18,7 @@
      <a href="{{ url_for('page', path='history') }}" 
         class="btn btn-lg btn-secondary">
         History
+        <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
     </a>
    </p>
  </div>

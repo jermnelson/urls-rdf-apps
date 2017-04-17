@@ -27,6 +27,10 @@ when
 ## References
 <sup id="ref-1">1</sup>Coyle, K. *On the Web, of the Web* LITA 2011 Keynote, October 1, 2011. Accessed
     (http://www.kcoyle.net/presentations/lita2011.html)
+<sup id="ref-2">2</sup> *Keep a simple URL structure*. Accessed 
+    (https://support.google.com/webmasters/answer/76329)
+<sup id="ref-3">3</sup> *Use canonical URLs*. Accessed
+    (https://support.google.com/webmasters/answer/139066) 
 
 [DJGO]: https://www.djangoproject.com/
 [REF2]: https://www.w3.org/Provider/Style/URI
