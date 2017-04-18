@@ -16,20 +16,22 @@ at (https://digitalccbeta.coloradocollege.edu) built upon the
 [Django][DJGO] that provides a function called [slugify](https://docs.djangoproject.com/en/1.11/ref/utils/#django.utils.text.slugify) for creating a 
 SEO friendly url. While I no longer actively develop in [Django][DJGO],
 I still use the basic regular expression function in many of my projects
-when  
 
 
 
 ## Wikipedia Pattern
 
 ## Conclusions
+*   The more I develop applications, starting with human recognizable, canonical 
+    URLs has trade-offs but I'm more often supporting search engine optimizations
+*   Speak
 
 ## References
-<sup id="ref-1">1</sup>Coyle, K. *On the Web, of the Web* LITA 2011 Keynote, October 1, 2011. Accessed
+1.  <sup id="ref-1">1</sup>Coyle, K. *On the Web, of the Web* LITA 2011 Keynote, October 1, 2011. Accessed
     (http://www.kcoyle.net/presentations/lita2011.html)
-<sup id="ref-2">2</sup> *Keep a simple URL structure*. Accessed 
+1.  <sup id="ref-2">2</sup> *Keep a simple URL structure*. Accessed 
     (https://support.google.com/webmasters/answer/76329)
-<sup id="ref-3">3</sup> *Use canonical URLs*. Accessed
+1.  <sup id="ref-3">3</sup> *Use canonical URLs*. Accessed
     (https://support.google.com/webmasters/answer/139066) 
 
 [DJGO]: https://www.djangoproject.com/
