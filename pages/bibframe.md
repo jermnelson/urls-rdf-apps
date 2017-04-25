@@ -116,7 +116,9 @@ scripts and is hosted on Github at
 [https://github.com/lcnetdev/marc2bibframe2](https://github.com/lcnetdev/marc2bibframe2).
 
 The basic URL pattern used in the default XSL transformation from MARC XML is again based on the value 
-in the 001 field but with the URL fragment pound sign followed by BIBFRAME classes. The same
+in the 001 field but with the URL fragment pound sign followed by a primary BIBFRAME class and instead of
+using a counter, adds the MARC fieldfor related
+and  . The same
 MARC record XML transforms into a BIBFRAME Work `http://catalog.coloradocollege.edu/13759163#Work` URL.
 
 <pre>
@@ -155,8 +157,8 @@ MARC record XML transforms into a BIBFRAME Work `http://catalog.coloradocollege.
 </pre>
 Download the RDF Turtle file [here](/static/data/cc-one-bf2.ttl).
 
-*   `http://catalog.coloradocollege.edu/13759163#Agent110-11` a BIBFRAME 2.0 Organization and Agent with a contribution 
-    role
+*   `http://catalog.coloradocollege.edu/13759163#Agent110-11` is a BIBFRAME 2.0 Organization and Agent with a contribution 
+    role to the above `http://catalog.coloradocollege.edu/13759163#Work`.  
     <pre>
 &lt;http://catalog.coloradocollege.edu/13759163#Agent110-11&gt; a bf:Agent,
         bf:Organization ;
