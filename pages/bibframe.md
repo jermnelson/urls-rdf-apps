@@ -2,7 +2,7 @@ title: BIBFRAME URLs from MARC
 published: 2017-04-26
 order: 0
 
-Comparing how the Library of Congress's MARC-to-BIBFRAME uses MARC
+Comparing the difference Library of Congress's MARC-to-BIBFRAME uses MARC
 records to build out URLs has slightly changed between BIBFRAME 1.0 and the
 2016 release of BIBFRAME 2.0. In each vocabulary version, the main tool uses
 the MARC 001 field to generate URLs for all of the associated RDF Entities.
@@ -115,10 +115,13 @@ for the Library of Congress tool for converting MARC XML to BIBFRAME 2.0 RDF XML
 scripts and is hosted on Github at 
 [https://github.com/lcnetdev/marc2bibframe2](https://github.com/lcnetdev/marc2bibframe2).
 
+The basic URL pattern used in the default XSL transformation from MARC XML is again based on the value 
+in the 001 field but with the URL fragment pound sign followed by BIBFRAME classes. The same
+MARC record XML transforms into a BIBFRAME Work `http://catalog.coloradocollege.edu/13759163#Work` URL.
 
 <pre>
 &lt;http://catalog.coloradocollege.edu/13759163#Work&gt; a bf:Text,
-        bf:Work ;
+        bf:Work;
     rdfs:label "Report of the Woman's Council of Defense for Colorado : from November 30, 1917to November 30, 1918." ;
     bf:adminMetadata [ a bf:AdminMetadata ;
             bflc:encodingLevel [ a bflc:EncodingLevel ;
@@ -164,7 +167,7 @@ Download the RDF Turtle file [here](/static/data/cc-one-bf2.ttl).
     </pre>
 
 *   `http://catalog.coloradocollege.edu/13759163#Topic650-15` a BIBFRAME 2.0
-    topic 
+    topic URL generated from 
     <pre>
 &lt;http://catalog.coloradocollege.edu/13759163#Topic650-15&gt; a bf:Topic,
         madsrdf:Topic ;
