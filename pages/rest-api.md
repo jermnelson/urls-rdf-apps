@@ -11,9 +11,3 @@ REST operations are mapped to the common HTTP Verbs of GET, POST, PUT, and DELET
 ## REST Verbs with Fedora
 
 
-
-## References
-1.  *Resource Naming* from REST API Tutorial. Access 
-    [http://www.restapitutorial.com/lessons/restfulresourcenaming.html](http://www.restapitutorial.com/lessons/restfulresourcenaming.html)
-1.  Sahni, V. *Best Practices for Designing a Pragmatic RESTful API*. 
-    Accessed [http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api) 

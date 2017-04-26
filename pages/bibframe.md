@@ -119,8 +119,11 @@ scripts and is hosted on Github at
 The basic URL pattern used in the default XSL transformation from MARC XML is again based on the value 
 in the [001 field](http://www.loc.gov/marc/bibliographic/bd001.html) with a URL fragment starting with the
 pound sign (**\#**) followed by a primary BIBFRAME class. Instead of
-using a counter, the `marc2bibframe` project adds the MARC field. The same
-MARC record XML transforms into a BIBFRAME Work `http://catalog.coloradocollege.edu/13759163#Work` URL.
+using a simple counter, the `marc2bibframe2` XSL adds the MARC field tag followed by a XSLT position() function
+call that returns an integer. 
+The MARC example record XML transforms into a BIBFRAME Work `http://catalog.coloradocollege.edu/13759163#Work` 
+URI.
+
 
 <pre>
 &lt;http://catalog.coloradocollege.edu/13759163#Work&gt; a bf:Text,
@@ -159,8 +162,10 @@ MARC record XML transforms into a BIBFRAME Work `http://catalog.coloradocollege.
 Download the RDF Turtle file [here](/static/data/cc-one-bf2.ttl).
 
 *   `http://catalog.coloradocollege.edu/13759163#Agent110-11` is a BIBFRAME 2.0 Organization and Agent with a contribution 
-    role to the above `http://catalog.coloradocollege.edu/13759163#Work` with the final fragment part of the URL
-    references in part the record's [MARC 110](http://www.loc.gov/marc/bibliographic/bd110.html) field. 
+    role to the above `http://catalog.coloradocollege.edu/13759163#Work` BIBFRAME Work URI with the final fragment part of the URI
+    references in part the record's [MARC 110](http://www.loc.gov/marc/bibliographic/bd110.html) field and an integer of 11
+    from this snippet in the [XSL](https://github.com/lcnetdev/marc2bibframe2/blob/master/xsl/ConvSpec-1XX%2C6XX%2C7XX%2C8XX-names.xsl) 
+    `<xsl:value-of select="position()"/>`. 
     <pre>
 &lt;http://catalog.coloradocollege.edu/13759163#Agent110-11&gt; a bf:Agent,
         bf:Organization ;
@@ -171,7 +176,10 @@ Download the RDF Turtle file [here](/static/data/cc-one-bf2.ttl).
     </pre>
 
 *   `http://catalog.coloradocollege.edu/13759163#Topic650-15` a BIBFRAME 2.0
-    topic URL generated from 
+    topic URI generated from the MARC [650](http://www.loc.gov/marc/bibliographic/bd650.html) and an integer of 
+    15 reflecting the XSL `position()` function call. Like in the BIBFRAME 1.0 conversion the final step would
+    be preform a controlled look-up to an external Authority, in this case Library of Congress Subject heading
+    and resolve to `http://id.loc.gov/authorities/subjects/sh85148236`. 
     <pre>
 &lt;http://catalog.coloradocollege.edu/13759163#Topic650-15&gt; a bf:Topic,
         madsrdf:Topic ;
