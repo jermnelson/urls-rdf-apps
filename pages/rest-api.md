@@ -6,7 +6,8 @@ REST for representational state transfer are a way to access and manage web reso
 stateless operations like Read, Add, Modify, and Delete. In developing RDF Application APIs,
 REST operations are mapped to the common HTTP Verbs of GET, POST, PUT, and DELETE for URLs.
 
-<blockquote class="blockquote">
+
+<blockquote class="blockquote bg-default">
 <p>&hellip; a RESTful API ends up being simply a collection of URIs, HTTP 
 calls to those URIs and some JSON and/or XML representations of resources, 
 many of which will contain relational links. The RESTful principal of 
@@ -24,8 +25,9 @@ that is a thing instead of referring to an action.
 From *[REST API Tutorial](/urls-rdf-apps/help#ref-5)*
 
 
-## In BIBCAT RDF Applications
+## BIBCAT RDF Applications
+
 
 ## REST Verbs with Fedora
 
-
+## NISO eContent API Working Group
