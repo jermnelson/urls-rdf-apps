@@ -26,8 +26,15 @@ From *[REST API Tutorial](/urls-rdf-apps/help#ref-5)*
 
 
 ## BIBCAT RDF Applications
-
+The development roadmap for the [BIBCAT](https://bibcat.org/) and it's supporting 
+[RDF Framework](https://github.com/KnowledgeLinks/rdfframework) include a robust 
+REST API for RDF entities. This work is challenging because in RDF applications that
+depend heavily on a triplestore, your API must be able to manipulate the data at the 
+triple granularity and not at the MARC record-level as done by most ILS. 
 
 ## REST Verbs with Fedora
+The Fedora Repository has had a REST API for a number years starting with their 3.x
+series. Fedora 4 goes further and has working towards full compliance of the W3C's
+[Linked Data Platform](https://www.w3.org/TR/ldp/) specification.
 
 ## NISO eContent API Working Group

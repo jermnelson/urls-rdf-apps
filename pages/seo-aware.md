@@ -144,9 +144,12 @@ geographic information to improve the search engine result, we needed to used th
 ontology to further describe the institutions. 
  
 ## Conclusions
-*   The more I develop applications, starting with human recognizable, canonical 
-    URLs has trade-offs but I'm more often supporting search engine optimizations
-*   Speak
+*   Starting with human recognizable, canonical 
+    URLs has trade-offs but more inclined to support search engine optimizations 
+    especially for public-facing applications
+*   Mixing UUID, MARC-based URLs, and SEO URLs is more typical as we build the
+    relationships linking our resources to external bodies and (hopefully) other
+    semantic web applications linking to our published resources
 
 [DJGO]: https://www.djangoproject.com/
 [REF2]: https://www.w3.org/Provider/Style/URI
